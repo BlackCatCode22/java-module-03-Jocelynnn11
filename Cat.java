@@ -1,8 +1,14 @@
-public class Cat {
-    String name;
-    int age;
-    int livesRemaining;
-    public void  meow(){
+package myanimals;
 
+public class Cat extends Animal {
+    // the Cat class is a subclass of Animal
+    // it should have all the methods from the Animal class
+    // available to it.
+    // THis is polymorphism - this word means "many shapes"
+    // when used here, by a Cat Object, this method has the same name
+    // as the method in the superclass, take another shape.
+
+    public void animalSound (){
+        System.out.println("\n A sound from the Cat class used by a Cat Object- meow");
     }
 }
