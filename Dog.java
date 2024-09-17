@@ -1,17 +1,58 @@
-package myanimals;
+public class Dog {
+    // Create two fields for our Dog objects.
+    private String name;
+    private int age;
+    // Create getters and setters four our fields.
 
-public class Dog extends Animal{
+    // Create getter and setter for name
 
-        // the Dog class is a subclass of Animal
-        // it should have all the methods from the Animal class
-        // available to it.
-        // THis is polymorphism - this word means "many shapes"
-        // when used here, by a Cat Object, this method has the same name
-        // as the method in the superclass, take another shape.
+    public void setName(String name){
+        this.name = name;
 
-        public void animalSound (){
-            System.out.println("\n A sound from the Dog class used by a Dog Object- bark");
-        }
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    // Create getter and setter for age
+    public int setAge(){
+        return this.age;
+        // this would work as well because there is no ambiguity
+        // return age;
+    }
+    public void setAge(int age){
+      this.age = age;
     }
 
 
+    // Create a constructor for the Dog objects that will be created with the "new" keyword.
+    // A constructor is a special method that is called/invoked when... a Dog class is used
+    // to create an object.
+    public Dog() {
+        System.out.println("\n A dog object was created!! This message is from the constructor in the Dog class. \n");
+    }
+
+
+    // Create a constructor that accepts a String data type for the Dog's name.
+    public Dog(String myName) {
+      this.name = myName;
+
+
+
+    }
+    // Create a constructor that accepts an argument with an object is created, this argument will
+    // be int
+    public Dog (int theAge) {
+        this.age = theAge;
+
+    }
+     // Create a constructor that accepts two arguments - a String for the name, and an int for age.
+    public Dog( String someName, int someAge) {
+        // assign
+        this.age = someAge;
+        this.name = someName;
+
+    }
+}
